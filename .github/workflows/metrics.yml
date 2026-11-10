@@ -1,0 +1,33 @@
+name: Metrics
+
+on:
+  schedule:
+    - cron: "0 3 * * *"   # daily, 04:00 Tunis time
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  metrics:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: lowlighter/metrics@v3.34
+        with:
+          token: ${{ secrets.METRICS_TOKEN }}
+          user: 000H2G000
+          filename: metrics.svg
+          template: classic
+          base: header, activity, community, repositories
+          config_timezone: Africa/Tunis
+          config_display: large
+          repositories_affiliations: owner
+
+          plugin_isocalendar: yes
+          plugin_isocalendar_duration: full-year
+
+          plugin_languages: yes
+          plugin_languages_details: percentage
+          plugin_languages_limit: 8
+          plugin_languages_ignored: html, css, scss
+          plugin_languages_sections: most-used
