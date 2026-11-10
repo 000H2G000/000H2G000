@@ -2,8 +2,8 @@ name: Metrics
 
 on:
   schedule:
-    - cron: "0 3 * * *"   # daily, 04:00 Tunis time
-  workflow_dispatch:
+    - cron: "0 3 1 * *"   # 1st of each month, 04:00 Tunis time
+  workflow_dispatch:       # adds a "Run workflow" button in the Actions tab
 
 permissions:
   contents: write
