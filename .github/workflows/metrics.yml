@@ -12,10 +12,17 @@ jobs:
   metrics:
     runs-on: ubuntu-latest
     steps:
+      # Use the official v3.34 image, pinned by its digest so it can't be swapped.
+      # Tagged with the name the action looks for, so the action uses it instead of building.
+      - name: Load pinned metrics image
+        run: |
+          docker pull ghcr.io/lowlighter/metrics@sha256:257392f90340f916cb8b815026f259399f6b246d3eb7de38b58bfe7a07bd5b65
+          docker tag ghcr.io/lowlighter/metrics@sha256:257392f90340f916cb8b815026f259399f6b246d3eb7de38b58bfe7a07bd5b65 metrics:3.34.0
+
       # Pinned to the exact v3.34 commit so the code that receives the token can't change.
       - uses: lowlighter/metrics@65836723097537a54cd8eb90f61839426b4266b6 # v3.34
         with:
-          # Build from the pinned source instead of pulling the prebuilt image, whose tag can be moved.
+          # Don't pull the image by its movable tag; use the digest-pinned one loaded above.
           use_prebuilt_image: no
           token: ${{ secrets.METRICS_TOKEN }}
           user: 000H2G000
