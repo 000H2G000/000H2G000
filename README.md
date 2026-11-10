@@ -42,4 +42,8 @@ systems   Linux hardening · Windows · networking · virtualization
 build     TypeScript · React · React Native · Node.js · MongoDB
 ```
 
+### Activity
+
+<img src="metrics.svg" alt="GitHub activity, contribution calendar and most-used languages for Aziz Hadouchi, including private work" width="100%">
+
 <sub>Open to SOC analyst and security engineering roles. Reach me through LinkedIn or the contact section of my portfolio.</sub>
