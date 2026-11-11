@@ -36,12 +36,6 @@ jobs:
           plugin_followup: yes
           plugin_followup_sections: repositories, user
 
-          # GitHub achievements, compact badges
-          plugin_achievements: yes
-          plugin_achievements_display: compact
-          plugin_achievements_threshold: B
-          plugin_achievements_secrets: no
-
           # 3D contribution calendar with streaks
           plugin_isocalendar: yes
           plugin_isocalendar_duration: half-year
