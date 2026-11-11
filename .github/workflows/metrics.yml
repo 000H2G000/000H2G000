@@ -28,28 +28,34 @@ jobs:
           user: 000H2G000
           filename: metrics.svg
           template: classic
-          base: header, activity, community, repositories
           config_timezone: Africa/Tunis
-          config_display: large
-          # Dark style matching the README banner (navy panel, amber headings, cyan icons).
-          extras_css: |
-            svg.large { background: #0a0e1a; border-radius: 16px; }
-            svg { color: #a7b0cb; }
-            h1, h1 span { color: #e8ecf7; }
-            h2, h3 { color: #ffb224; }
-            a { color: #ffb224; }
-            .field svg { fill: #5ad1e6; }
-            [fill="#ebedf0"] { fill: #1b2238; }
-            [fill="#9be9a8"] { fill: #4a3510; }
-            [fill="#40c463"] { fill: #8a5f12; }
-            [fill="#30a14e"] { fill: #c98a1a; }
-            [fill="#216e39"] { fill: #ffb224; }
+          config_display: columns
+          base: header, repositories
 
+          # Lines of code added and removed, across your repos
+          plugin_lines: yes
+
+          # Commit activity by hour and by day, and languages you've been writing lately
+          plugin_habits: yes
+          plugin_habits_charts: yes
+          plugin_habits_facts: no
+          plugin_habits_days: 30
+          plugin_habits_trim: yes
+
+          # Technology icons from the topics of repos you've starred
+          plugin_topics: yes
+          plugin_topics_mode: icons
+          plugin_topics_limit: 30
+
+          # Lighthouse scores for the portfolio
+          plugin_pagespeed: yes
+          plugin_pagespeed_url: https://aziz-hadouchi.vercel.app
+
+          # 3D contribution calendar with streaks
           plugin_isocalendar: yes
-          plugin_isocalendar_duration: full-year
+          plugin_isocalendar_duration: half-year
 
+          # Most used languages, by bytes of code
           plugin_languages: yes
-          plugin_languages_details: percentage
           plugin_languages_limit: 8
           plugin_languages_ignored: html, css, scss
-          plugin_languages_sections: most-used
