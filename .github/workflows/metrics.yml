@@ -44,7 +44,6 @@ jobs:
             [fill="#40c463"] { fill: #8a5f12; }
             [fill="#30a14e"] { fill: #c98a1a; }
             [fill="#216e39"] { fill: #ffb224; }
-          repositories_affiliations: owner
 
           plugin_isocalendar: yes
           plugin_isocalendar_duration: full-year
@@ -52,5 +51,4 @@ jobs:
           plugin_languages: yes
           plugin_languages_details: percentage
           plugin_languages_limit: 8
-          plugin_languages_ignored: html, css, scss
           plugin_languages_sections: most-used
