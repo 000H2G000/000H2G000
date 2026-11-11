@@ -32,14 +32,6 @@ jobs:
           config_display: columns
           base: header, activity, community, repositories
 
-          # Lines of code added and removed, across your repos
-          plugin_lines: yes
-
-          # Technology icons from the topics of repos you've starred
-          plugin_topics: yes
-          plugin_topics_mode: icons
-          plugin_topics_limit: 30
-
           # 3D contribution calendar with streaks
           plugin_isocalendar: yes
           plugin_isocalendar_duration: half-year
