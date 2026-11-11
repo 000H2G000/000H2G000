@@ -31,6 +31,19 @@ jobs:
           base: header, activity, community, repositories
           config_timezone: Africa/Tunis
           config_display: large
+          # Dark style matching the README banner (navy panel, amber headings, cyan icons).
+          extras_css: |
+            svg.large { background: #0a0e1a; border-radius: 16px; }
+            svg { color: #a7b0cb; }
+            h1, h1 span { color: #e8ecf7; }
+            h2, h3 { color: #ffb224; }
+            a { color: #ffb224; }
+            .field svg { fill: #5ad1e6; }
+            [fill="#ebedf0"] { fill: #1b2238; }
+            [fill="#9be9a8"] { fill: #4a3510; }
+            [fill="#40c463"] { fill: #8a5f12; }
+            [fill="#30a14e"] { fill: #c98a1a; }
+            [fill="#216e39"] { fill: #ffb224; }
           repositories_affiliations: owner
 
           plugin_isocalendar: yes
